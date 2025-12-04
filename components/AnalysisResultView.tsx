@@ -2,7 +2,6 @@ import React from 'react';
 import { AnalysisResult } from '../types';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { ShieldAlert, ShieldCheck, AlertTriangle, CheckCircle2, XCircle, Search, Sparkles, Download, Link as LinkIcon, FileText } from 'lucide-react';
-import { jsPDF } from 'jspdf';
 
 interface AnalysisResultViewProps {
   result: AnalysisResult;
@@ -33,8 +32,16 @@ const AnalysisResultView: React.FC<AnalysisResultViewProps> = ({ result, imagePr
     }
   };
 
-  const handleDownloadReport = () => {
+  const handleDownloadReport = async () => {
     try {
+      // Dynamically import jsPDF to prevent app crash on load if module resolution fails
+      const module = await import('jspdf');
+      const jsPDF = module.jsPDF || (module as any).default;
+      
+      if (!jsPDF) {
+        throw new Error("PDF Library failed to load");
+      }
+
       const doc = new jsPDF();
       
       // Title
@@ -136,7 +143,7 @@ const AnalysisResultView: React.FC<AnalysisResultViewProps> = ({ result, imagePr
       doc.save("Check-Kar-Report.pdf");
     } catch (error) {
       console.error("PDF Generation Error", error);
-      alert("Failed to generate PDF. Please ensure your browser supports this feature.");
+      alert("Failed to generate PDF. Please try again or check your internet connection.");
     }
   };
 
