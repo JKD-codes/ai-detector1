@@ -34,11 +34,11 @@
             <tbody>
                 <tr>
                     <td style="padding: 12px; border: 1px solid #4a5568;"><strong>Live URL</strong></td>
-                    <td style="padding: 12px; border: 1px solid #4a5568;"><a href="https://ai-detect-orpin.vercel.app/" target="_blank" style="color: #4299e1;">https://ai-detector2.vercel.app/</a></td>
+                    <td style="padding: 12px; border: 1px solid #4a5568;"><a href="https://ai-detector2.vercel.app/" target="_blank" style="color: #4299e1;">https://ai-detector2.vercel.app/</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 12px; border: 1px solid #4a5568;"><strong>GitHub Repo</strong></td>
-                    <td style="padding: 12px; border: 1px solid #4a5568;"><a href="https://github.com/JKD-codes/ai-detector" target="_blank" style="color: #4299e1;">https://github.com/JKD-codes/ai-detector</a></td>
+                    <td style="padding: 12px; border: 1px solid #4a5568;"><a href="https://github.com/JKD-codes/ai-detector1" target="_blank" style="color: #4299e1;">https://github.com/JKD-codes/ai-detector</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 12px; border: 1px solid #4a5568;"><strong>Deployment Platform</strong></td>
